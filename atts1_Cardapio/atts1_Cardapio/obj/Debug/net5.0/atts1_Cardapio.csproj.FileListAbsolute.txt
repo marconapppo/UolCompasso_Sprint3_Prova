@@ -1,0 +1,16 @@
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.csproj.AssemblyReference.cache
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.AssemblyInfoInputs.cache
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.AssemblyInfo.cs
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.exe
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.deps.json
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.runtimeconfig.json
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.runtimeconfig.dev.json
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.dll
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\ref\atts1_Cardapio.dll
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\atts1_Cardapio.pdb
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.dll
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\ref\atts1_Cardapio.dll
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.pdb
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.genruntimeconfig.cache
