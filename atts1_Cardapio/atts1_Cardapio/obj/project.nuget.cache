@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jh1BY8UBgk/KOuO+Ao0ieKRBvbc+AXj4vvwozhud50qm8xsDr0/2rhcufYpajd6UpWRM81EtNboUJIV1KkhmGw==",
+  "dgSpecHash": "/UUG640AZgIgmwuWSnR+B6E+Qpt7l2DNQK+22q6FNYk9B0nOMg5yBLx8asacD26EYmUQGwpuCPai0oNOYFuYEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\atts1_Cardapio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

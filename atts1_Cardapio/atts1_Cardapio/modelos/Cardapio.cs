@@ -20,7 +20,7 @@ namespace atts1_Cardapio
             this.ListaProduto = ListaProduto;
         }
 
-        public void mostrarCardapio()
+        public void MostrarCardapio()
         {
             Console.WriteLine("Codigo\t Produto\t Preço Unitario");
             foreach (var produto in ListaProduto)
@@ -29,7 +29,7 @@ namespace atts1_Cardapio
             }
         }
 
-        public Produto consultarProduto(int codigo)
+        public Produto ConsultarProduto(int codigo)
         {
             var produtos = from p in ListaProduto
                         where p.codigo == codigo

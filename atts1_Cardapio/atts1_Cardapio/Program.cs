@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace atts1_Cardapio
 {
@@ -12,7 +14,7 @@ namespace atts1_Cardapio
 
         static void Main(string[] args)
         {
-            inicializarObjetos();
+            InicializarObjetos();
             bool exibeMenu = true;
             while (exibeMenu)
             {
@@ -54,54 +56,95 @@ namespace atts1_Cardapio
             Console.WriteLine("Pedido\n");
 
             //valiando Mesa
-            int numeroMesa = validarMesa();
+            int numeroMesa = ValidarMesa();
             Console.Clear();
 
             //realizando pedido
-            int codigo, quantidade;
             Pedido pedido = new Pedido();
-            Produto produto;
-            while (true)
-            {
-                Console.WriteLine("Cardapio\n");
-                cardapio.mostrarCardapio();
-                Console.WriteLine("\n");
-
-                Console.Write("Informe o Codigo(encerre o pedido com 999):");
-                codigo = Convert.ToInt32(Console.ReadLine());
-
-                if(codigo == 999) { break; }
-
-                Console.Write("Informe a Quantidade:");
-                quantidade = Convert.ToInt32(Console.ReadLine());
-
-                produto = cardapio.consultarProduto(codigo) as Produto;
-
-                pedido.adicionarObjeto(produto, quantidade);
-                pedido.valorTotal = (produto.valorUnitario * (double)quantidade) + pedido.valorTotal;
-
-                Console.Clear();
-            }
+            pedido = RealizandoPedido(pedido);
 
             //finalizando pedido
-            Console.Clear();
-            Console.WriteLine("A mesa " + numeroMesa + " pediu os seguintes itens:");;
-            
-            //mostrando a comanda
-            foreach(var item in pedido.ListaProduto)
-            {
-                Console.WriteLine(item.Value + "-" + item.Key.descricao);
-            }
-            Console.WriteLine("Com valor total de R$: {0:N2}", pedido.valorTotal);
-            
+            FinalizandoPedido(pedido,numeroMesa);
+
             //convertendo para JSON
+            pedido.ListaProduto = pedido.ListaProduto.Distinct().ToList();
+            string jsonString = JsonConvert.SerializeObject(pedido, Formatting.Indented);
+            Console.WriteLine(jsonString);
 
 
             Console.Write("\n\nPressione uma tecla para continuar...");
             Console.ReadKey();
         }
 
-        private static int validarMesa()
+
+        private static void FinalizandoPedido(Pedido pedido, int numeroMesa)
+        {
+            Console.Clear();
+            Console.WriteLine("A mesa " + numeroMesa + " pediu os seguintes itens:");
+
+            Dictionary<string, int> dicionarioPedido = new Dictionary<string, int>();
+            Produto itemAnterior = new Produto(0,"",0.00);
+            int count = 1;
+            foreach (var item in pedido.ListaProduto)
+            {
+                if(item.codigo == itemAnterior.codigo)
+                {
+                    count++;
+                    dicionarioPedido[item.descricao] = count;
+                }
+                else
+                { 
+                    dicionarioPedido.Add(item.descricao, count);
+                }
+                itemAnterior = item;
+            }
+            //print
+            foreach(var item in dicionarioPedido)
+            {
+                Console.WriteLine(item.Value + " - " + item.Key);
+            }
+            Console.WriteLine("Com valor total de R$: {0:N2}", pedido.valorTotal);
+
+            Console.Write("\n\nPressione uma tecla para continuar...\n");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        private static Pedido RealizandoPedido(Pedido pedido)
+        {
+            int codigo, quantidade;
+            Produto produto;
+            while (true)
+            {
+                Console.WriteLine("Cardapio\n");
+                cardapio.MostrarCardapio();
+                Console.WriteLine("\n");
+
+                Console.Write("Informe o Codigo(encerre o pedido com 999):");
+                codigo = Convert.ToInt32(Console.ReadLine());
+
+                if (codigo == 999) { break; }
+
+                Console.Write("Informe a Quantidade:");
+                quantidade = Convert.ToInt32(Console.ReadLine());
+
+                produto = cardapio.ConsultarProduto(codigo) as Produto;
+
+
+                pedido.valorTotal = Math.Round((produto.valorUnitario * (double)quantidade) + pedido.valorTotal);
+
+                while (quantidade > 0)
+                {
+                    pedido.adicionarObjeto(produto);
+                    quantidade--;
+                }
+
+                Console.Clear();
+            }
+            return pedido;
+        }
+
+        private static int ValidarMesa()
         {
             //validando mesa
             Console.WriteLine("Qual o numero da mesa?");
@@ -131,7 +174,7 @@ namespace atts1_Cardapio
              
         } 
 
-        private static void inicializarObjetos()
+        private static void InicializarObjetos()
         {
 
             Produto[] p = new Produto[] {
@@ -142,11 +185,9 @@ namespace atts1_Cardapio
                 new Produto(104, "Coca 2L", 10.00),
                 new Produto(105, "Refrigerante", 1.00)
             };
-            
 
             var listaProduto = new List<Produto>();
             listaProduto.AddRange(p);
-
 
             cardapio = new Cardapio(listaProduto);
 

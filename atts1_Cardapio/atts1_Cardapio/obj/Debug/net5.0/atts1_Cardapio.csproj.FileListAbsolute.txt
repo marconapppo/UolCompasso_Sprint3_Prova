@@ -14,3 +14,5 @@ C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\
 C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\ref\atts1_Cardapio.dll
 C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.pdb
 C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.genruntimeconfig.cache
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\gabri\source\repos\avaliacao_sprint3\atts1_Cardapio\atts1_Cardapio\obj\Debug\net5.0\atts1_Cardapio.csproj.CopyComplete

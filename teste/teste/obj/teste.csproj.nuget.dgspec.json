@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\atts1_Cardapio.csproj": {}
+    "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\teste\\teste\\teste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\atts1_Cardapio.csproj": {
+    "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\teste\\teste\\teste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\atts1_Cardapio.csproj",
-        "projectName": "atts1_Cardapio",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\atts1_Cardapio.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\teste\\teste\\teste.csproj",
+        "projectName": "teste",
+        "projectPath": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\teste\\teste\\teste.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\atts1_Cardapio\\atts1_Cardapio\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\source\\repos\\avaliacao_sprint3\\teste\\teste\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

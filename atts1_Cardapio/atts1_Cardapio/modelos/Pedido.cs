@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,17 @@ namespace atts1_Cardapio
 {
     class Pedido
     {
+        [JsonProperty("ValorTotal")]
         public double valorTotal;
-        public Dictionary<Produto,int> ListaProduto = new Dictionary<Produto, int>();
+        [JsonProperty("Itens")]
+        public List<Produto> ListaProduto = new List<Produto>();
 
-        public void adicionarObjeto(Produto produto,int quantidade)
+
+        public void adicionarObjeto(Produto produto)
         {
-            ListaProduto.Add(produto,quantidade);
+            ListaProduto.Add(produto);
         }
+
+
     }
 }
