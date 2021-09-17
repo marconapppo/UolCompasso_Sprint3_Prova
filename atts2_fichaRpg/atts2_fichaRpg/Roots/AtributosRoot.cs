@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace atts2_fichaRpg.Roots
 {
     [JsonObject(MemberSerialization.OptIn)]
-    class AtributosRoot : IEnumerable
+    class AtributosRoot 
     {
         public AtributosRoot(IEnumerable<Atributos> atributos)
         {
@@ -20,9 +20,6 @@ namespace atts2_fichaRpg.Roots
         public IEnumerable<Atributos> Atributos { get; set; }
 
 
-        public IEnumerator GetEnumerator()
-        {
-            return Atributos.GetEnumerator();
-        }
+        
     }
 }
