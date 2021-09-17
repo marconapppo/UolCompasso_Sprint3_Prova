@@ -122,6 +122,9 @@ namespace atts1_Cardapio
 
                 Console.Write("Informe o Codigo(encerre o pedido com 999):");
                 codigo = Convert.ToInt32(Console.ReadLine());
+                //validando codigo
+                validarCodigo(codigo);
+
 
                 if (codigo == 999) { break; }
 
@@ -142,6 +145,23 @@ namespace atts1_Cardapio
                 Console.Clear();
             }
             return pedido;
+        }
+
+        private static bool validarCodigo(int codigo)
+        {
+            while (true)
+            {
+                var produto = cardapio.ConsultarProduto(codigo);
+                if (produto == null)
+                {
+                    Console.WriteLine("Nao eh um codigo valido, digite outro:");
+                    codigo = Convert.ToInt32(Console.ReadLine());
+                }
+                else{
+                    break;
+                }
+            }
+            return true;
         }
 
         private static int ValidarMesa()
