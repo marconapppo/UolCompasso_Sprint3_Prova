@@ -53,9 +53,11 @@ namespace atts1_Cardapio
             Console.Clear();
             Console.WriteLine("Pedido\n");
 
+            //valiando Mesa
             int numeroMesa = validarMesa();
             Console.Clear();
 
+            //realizando pedido
             int codigo, quantidade;
             Pedido pedido = new Pedido();
             Produto produto;
@@ -78,20 +80,22 @@ namespace atts1_Cardapio
                 pedido.adicionarObjeto(produto, quantidade);
                 pedido.valorTotal = (produto.valorUnitario * (double)quantidade) + pedido.valorTotal;
 
-                Console.ReadKey();
                 Console.Clear();
             }
 
             //finalizando pedido
             Console.Clear();
             Console.WriteLine("A mesa " + numeroMesa + " pediu os seguintes itens:");;
-                       
+            
+            //mostrando a comanda
             foreach(var item in pedido.ListaProduto)
             {
                 Console.WriteLine(item.Value + "-" + item.Key.descricao);
             }
             Console.WriteLine("Com valor total de R$: {0:N2}", pedido.valorTotal);
             
+            //convertendo para JSON
+
 
             Console.Write("\n\nPressione uma tecla para continuar...");
             Console.ReadKey();
@@ -107,9 +111,14 @@ namespace atts1_Cardapio
             while (true)
             {
                 //se a mesa estiver cheia ou não for um numero valido
-                if ((mesaCheia[numeroMesa].Equals(true)) || (numeroMesa > 4) || (numeroMesa < 1))
+                if ((numeroMesa > 4) || (numeroMesa < 0))
                 {
-                    Console.WriteLine("Mesa invalida ou cheia, digite novamente uma mesa valida:");
+                    Console.WriteLine("Mesa invalida, digite novamente uma mesa valida:");
+                    numeroMesa = Convert.ToInt32(Console.ReadLine());
+                }
+                else if (mesaCheia[numeroMesa].Equals(true))
+                {
+                    Console.WriteLine("Mesa cheia, digite novamente uma mesa valida:");
                     numeroMesa = Convert.ToInt32(Console.ReadLine());
                 }
                 else
@@ -120,7 +129,7 @@ namespace atts1_Cardapio
             }
             return numeroMesa;
              
-        }
+        } 
 
         private static void inicializarObjetos()
         {
