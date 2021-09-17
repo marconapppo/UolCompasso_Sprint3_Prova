@@ -125,7 +125,6 @@ namespace atts1_Cardapio
                 //validando codigo
                 validarCodigo(codigo);
 
-
                 if (codigo == 999) { break; }
 
                 Console.Write("Informe a Quantidade:");

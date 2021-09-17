@@ -1,0 +1,20 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "nomeClasse": "Mago"
+    },
+    {
+      "id": 2,
+      "nomeClasse": "Guerreiro"
+    },
+    {
+      "id": 3,
+      "nomeClasse": "Monge"
+    },
+    {
+      "id": 4,
+      "nomeClasse": "Amazona"
+    }
+  ]
+}

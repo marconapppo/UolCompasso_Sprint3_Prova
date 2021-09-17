@@ -1,0 +1,22 @@
+{
+  "atributos": [
+    {
+      "classeId": 1,
+      "forca": 2,
+      "destreza": 3,
+      "inteligencia": 4
+    },
+    {
+      "classeId": 4,
+      "forca": 5,
+      "destreza": 3,
+      "inteligencia": 1
+    },
+    {
+      "classeId": 3,
+      "forca": 6,
+      "destreza": 2,
+      "inteligencia": 4
+    }
+  ]
+}
