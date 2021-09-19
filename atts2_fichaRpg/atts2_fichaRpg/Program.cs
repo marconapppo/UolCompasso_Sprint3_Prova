@@ -78,32 +78,24 @@ namespace atts2_fichaRpg
 
         public async Task<ClassesRoot> ObterClassesAsync()
         {
-            Task<ClassesRoot> t1;
             string jsonStringAtributos = await File.ReadAllTextAsync("classes.json");
-            t1 = Task.Run(() => {
-                return JsonConvert.DeserializeObject<ClassesRoot>(jsonStringAtributos);
-            });
-            return await t1;
+            var classe = JsonConvert.DeserializeObject<ClassesRoot>(jsonStringAtributos);
+            return classe;
         }
 
         public async Task<IdsRoot> ObterIdsFiltradosAsync()
         {
-            Task<IdsRoot> t1;
             string jsonStringAtributos = await File.ReadAllTextAsync("ids_filtrados.json");
-            t1 = Task.Run(() => {
-                return JsonConvert.DeserializeObject<IdsRoot>(jsonStringAtributos);
-            });
-            return await t1;
+            var ids = JsonConvert.DeserializeObject<IdsRoot>(jsonStringAtributos);
+            return ids;
         }
 
         public async Task<AtributosRoot> ObterAtributosDeClasseAsync()
         {
             Task<AtributosRoot> t1;
             string jsonStringAtributos = await File.ReadAllTextAsync("atributos.json");
-            t1 = Task.Run(() => {
-                return JsonConvert.DeserializeObject<AtributosRoot>(jsonStringAtributos);
-            });
-            return await t1;
+            var atributos = JsonConvert.DeserializeObject<AtributosRoot>(jsonStringAtributos);
+            return atributos;
         }
     }
 }
